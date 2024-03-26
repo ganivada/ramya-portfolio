@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Popup Image</title>
+<style>
+    .container {
+  position: relative;
+  display: inline-block;
+}
+
+.thumbnail {
+  width: 200px;
+  height: auto;
+  cursor: pointer;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.popup-img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: red;
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+  <img src="Banner.png" alt="Image" class="thumbnail">
+  <div class="popup">
+    <span class="close">&times;</span>
+    <img src="Banner.png" alt="Popup Image" class="popup-img">
+  </div>
+</div>
+<div class="container">
+    <img src="html web3.png" alt="Image" class="thumbnail">
+    <div class="popup">
+      <span class="close">&times;</span>
+      <img src="html web3.png" alt="Popup Image" class="popup-img">
+    </div>
+  </div>
+  <div class="container">
+    <img src="html web.png" alt="Image" class="thumbnail">
+    <div class="popup">
+      <span class="close">&times;</span>
+      <img src="html web.png" alt="Popup Image" class="popup-img">
+    </div>
+  </div>
+  <div class="container">
+    <img src="html web2.png" alt="Image" class="thumbnail">
+    <div class="popup">
+      <span class="close">&times;</span>
+      <img src="html web2.png" alt="Popup Image" class="popup-img">
+    </div>
+  </div>
+  <div class="container">
+    <img src="figma5.png" alt="Image" class="thumbnail">
+    <div class="popup">
+      <span class="close">&times;</span>
+      <img src="figma5.png" alt="Popup Image" class="popup-img">
+    </div>
+  </div>
+  <div class="container">
+    <img src="figma6.png" alt="Image" class="thumbnail">
+    <div class="popup">
+      <span class="close">&times;</span>
+      <img src="figma6.png" alt="Popup Image" class="popup-img">
+    </div>
+  </div>
+  <div class="container">
+    <img src="figma3.png" alt="Image" class="thumbnail">
+    <div class="popup">
+      <span class="close">&times;</span>
+      <img src="figma3.png" alt="Popup Image" class="popup-img">
+    </div>
+  </div>
+  <div class="container">
+    <img src="figma1.png" alt="Image" class="thumbnail">
+    <div class="popup">
+      <span class="close">&times;</span>
+      <img src="figma1.png" alt="Popup Image" class="popup-img">
+    </div>
+  </div>
+  <div class="container">
+    <img src="figma2.png" alt="Image" class="thumbnail">
+    <div class="popup">
+      <span class="close">&times;</span>
+      <img src="figma2.png" alt="Popup Image" class="popup-img">
+    </div>
+  </div>
+  
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+  const thumbnail = document.querySelector('.thumbnail');
+  const popup = document.querySelector('.popup');
+  const close = document.querySelector('.close');
+
+  thumbnail.addEventListener('click', function() {
+    popup.style.display = 'block';
+  });
+
+  close.addEventListener('click', function() {
+    popup.style.display = 'none';
+  });
+
+  window.addEventListener('click', function(event) {
+    if (event.target === popup) {
+      popup.style.display = 'none';
+    }
+  });
+});
+
+</script>
+</body>
+</html>
